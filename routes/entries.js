@@ -16,7 +16,7 @@ router.post("/", verifyFirebaseToken, async (req, res) => {
     approach,
     problem_link,
   } = req.body;
-  console.log(req.body);
+
   const user = await User.findOne({ email: userEmail });
   if (!user) {
     return res.status(404).json({ message: "User not found" });
@@ -54,7 +54,6 @@ router.get("/", verifyFirebaseToken, async (req, res) => {
 
 // GET: Get code entry by id
 router.get("/:id", verifyFirebaseToken, async (req, res) => {
-  console.log(req.params.id);
   try {
     const entry = await CodeEntry.findById(req.params.id);
     if (!entry) {
