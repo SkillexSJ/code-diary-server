@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
+const verifyFirebaseToken = require("../middleware/VerifyFirebase");
+
 
 //  POST /api/users
 //  Register a new user

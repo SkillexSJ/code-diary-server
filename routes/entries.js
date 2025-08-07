@@ -1,4 +1,3 @@
-// routes/codeEntryRoutes.js
 const express = require("express");
 const router = express.Router();
 const CodeEntry = require("../models/CodeEntry");
